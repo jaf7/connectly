@@ -1,0 +1,199 @@
+<div class="box banner-box cta ">
+    <p class="has-text-centered">
+      Welcome to Connectly! Let's explore your interests.
+    </p>
+</div>
+
+  <!-- <div class="section"> -->
+  <div class="welcome-index-container">
+    <div class="columns">
+      <div class="column is-one-third text_center">
+        <div class="card">
+          <div class="card-image has-text-centered">
+            <div style="font-size: 4rem">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4><%= link_to(name_of_interest(1), 'interests/1') %></h4>
+              <p>Click "learning" to explore (or create your own) topics to advance your education. A few topics people are already interesting in learning about: </p>
+              <ul>
+                <% interest = 1 %>
+                <% three_subs_and_acts = random_three_subactivities(interest) %>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase}"%>
+                <%= link_to(three_subs_and_acts[0].name, activity_path(three_subs_and_acts[0])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[3].name, subactivity_path(three_subs_and_acts[3])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase}"%>
+                <%= link_to(three_subs_and_acts[1].name, activity_path(three_subs_and_acts[1])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[4].name, subactivity_path(three_subs_and_acts[4])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase}"%>
+                <%= link_to(three_subs_and_acts[2].name, activity_path(three_subs_and_acts[2])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[5].name, subactivity_path(three_subs_and_acts[5])) %><%= "." %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- column -->
+      <div class="column is-one-third text_center">
+        <div class="card">
+          <div class="card-image has-text-centered">
+            <div style="font-size: 4rem">
+              <i class="fa fa-globe"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4><%= link_to(name_of_interest(2), 'interests/2') %></h4>
+              <p>Select "traveling" to see (or create your own) trips that people are planning on taking. A few example of trips already being planned:</p>
+              <ul>
+                <% interest = 2 %>
+                <% three_subs_and_acts = random_three_subactivities(interest) %>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase} to "%>
+                <%= link_to(three_subs_and_acts[0].name, activity_path(three_subs_and_acts[0])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[3].name, subactivity_path(three_subs_and_acts[3])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase} to "%>
+                <%= link_to(three_subs_and_acts[1].name, activity_path(three_subs_and_acts[1])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[4].name, subactivity_path(three_subs_and_acts[4])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase} to "%>
+                <%= link_to(three_subs_and_acts[2].name, activity_path(three_subs_and_acts[2])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[5].name, subactivity_path(three_subs_and_acts[5])) %><%= "." %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- column -->
+      <div class="column is-one-third text_center">
+        <div class="card">
+          <div class="card-image has-text-centered">
+            <div style="font-size: 4rem">
+              <i class="far fa-hand-paper"></i>
+              <!-- <i class="fa fa-money-bill"></i> -->
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4><%= link_to(name_of_interest(3), 'interests/3') %></h4>
+              <p>Want to give back to your community? Want to give help to those in need? Select "volunteering" to see what you can do (or create your own)!</p>
+              <ul>
+                <% interest = 3 %>
+                <% three_subs_and_acts = random_three_subactivities(interest) %>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase} for "%>
+                <%= link_to(three_subs_and_acts[0].name, activity_path(three_subs_and_acts[0])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[3].name, subactivity_path(three_subs_and_acts[3])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase} for "%>
+                <%= link_to(three_subs_and_acts[1].name, activity_path(three_subs_and_acts[1])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[4].name, subactivity_path(three_subs_and_acts[4])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase} for "%>
+                <%= link_to(three_subs_and_acts[2].name, activity_path(three_subs_and_acts[2])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[5].name, subactivity_path(three_subs_and_acts[5])) %><%= "." %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- column -->
+    </div> <!-- columns -->
+
+    <div class="columns columns-below">
+      <div class="column is-one-third text_center">
+        <div class="card">
+          <div class="card-image has-text-centered">
+            <div style="font-size: 4rem">
+              <!-- <i class="fab fa-fort-awesome"></i> -->
+              <i class="fas fa-map"></i>
+              <!-- <i class="fal fa-futbol"></i> -->
+              <!-- <i class="fa fa-money-bill"></i> -->
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4><%= link_to(name_of_interest(4), 'interests/4') %></h4>
+              <p>Tired of the status quo and want a long-term change of scenery? Have a contract job or short-term schooling housing needs? Select "moving"!</p>
+              <ul>
+                <% interest = 4 %>
+                <% three_subs_and_acts = random_three_subactivities(interest) %>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase} to "%>
+                <%= link_to(three_subs_and_acts[0].name, activity_path(three_subs_and_acts[0])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[3].name, subactivity_path(three_subs_and_acts[3])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase} to "%>
+                <%= link_to(three_subs_and_acts[1].name, activity_path(three_subs_and_acts[1])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[4].name, subactivity_path(three_subs_and_acts[4])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase} to"%>
+                <%= link_to(three_subs_and_acts[2].name, activity_path(three_subs_and_acts[2])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[5].name, subactivity_path(three_subs_and_acts[5])) %><%= "." %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- column -->
+      <div class="column is-one-third text_center">
+        <div class="card">
+          <div class="card-image has-text-centered">
+            <div style="font-size: 4rem">
+              <!-- <i class="fal fa-futbol"></i> -->
+              <!-- <i class="fa fa-glass-martini"></i> -->
+              <!-- <i class="fa fa-music"></i> -->
+              <i class="fa fa-chess"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4><%= link_to(name_of_interest(5), 'interests/5') %></h4>
+              <p>You can only play so much solitaire... select "playing" to join a group of like-minded people that get together periodically.</p>
+              <ul>
+                <% interest = 5 %>
+                <% three_subs_and_acts = random_three_subactivities(interest) %>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase}"%>
+                <%= link_to(three_subs_and_acts[0].name, activity_path(three_subs_and_acts[0])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[3].name, subactivity_path(three_subs_and_acts[3])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase}"%>
+                <%= link_to(three_subs_and_acts[1].name, activity_path(three_subs_and_acts[1])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[4].name, subactivity_path(three_subs_and_acts[4])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase}"%>
+                <%= link_to(three_subs_and_acts[2].name, activity_path(three_subs_and_acts[2])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[5].name, subactivity_path(three_subs_and_acts[5])) %><%= "." %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- column -->
+      <div class="column is-one-third text_center">
+        <div class="card">
+          <div class="card-image has-text-centered">
+            <div style="font-size: 4rem">
+              <!-- <i class="fal fa-futbol"></i> -->
+              <!-- <i class="fa fa-glass-martini"></i> -->
+              <!-- <i class="fa fa-music"></i> -->
+              <!-- <i class="fab fa-fort-awesome"></i> -->
+              <!-- <i class="far fa-code"></i> -->
+              <i class="far fa-lightbulb"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4><%= link_to(name_of_interest(6), 'interests/6') %></h4>
+              <p>Select "creating" if you've always wanted to build something but whatever it is is more than a one person gig. The next airbnb awaits.</p>
+              <ul>
+                <% interest = 6 %>
+                <% three_subs_and_acts = random_three_subactivities(interest) %>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase}"%>
+                <%= link_to(three_subs_and_acts[0].name, activity_path(three_subs_and_acts[0])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[3].name, subactivity_path(three_subs_and_acts[3])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase}"%>
+                <%= link_to(three_subs_and_acts[1].name, activity_path(three_subs_and_acts[1])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[4].name, subactivity_path(three_subs_and_acts[4])) %><%= "." %></li>
+                <li><%= "I'm interested in #{name_of_interest(interest).downcase}"%>
+                <%= link_to(three_subs_and_acts[2].name, activity_path(three_subs_and_acts[2])) %><%= ": " %>
+                <%= link_to(three_subs_and_acts[5].name, subactivity_path(three_subs_and_acts[5])) %><%= "." %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- column -->
+    </div> <!-- columns -->
+  </div>
+  <!-- </div> --> <!-- section -->
+
+
+<%# link_to "SIGN UP", signup_path %>
+<%# link_to "SIGN IN", login_path %>
