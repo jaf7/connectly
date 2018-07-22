@@ -6,7 +6,7 @@ Discover your true travel | sports | music | learning | ? | companions based on 
 * Video demo [here](https://www.youtube.com/watch?v=O7oKxrhMfm4&feature=youtu.be)
 
 ## Motivation
-Sites like Meetup and Facebook are bogged down by numerous similar (if not identical) groups that users can find themselves with options paralysis. The idea behind Connectly is to create fewer groups for each activity, while ensuring that every group is truly passionate about their chosen topic.
+Sites like Meetup and Facebook are bogged down by so many similar (if not identical) groups that users can find themselves with options paralysis. The idea behind Connectly is to create fewer groups for each activity, while ensuring that every group is truly passionate about their chosen topic.
 
 ## Built Using
 * Full Rails MVC architecture, ActiveRecord associations, RESTful routes

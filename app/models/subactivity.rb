@@ -67,10 +67,11 @@ class Subactivity < ApplicationRecord
     if req.host.include? "localhost"
       search = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBFAaw-FrIqzQfUogDxkx-G7w844ACyeGM&cx=004691144422618487822:v5djm-re6s8&num=5&fields=items(title,link,displayLink,snippet,pagemap/cse_thumbnail/src)&q=#{term}"
     else
-      search = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBFAaw-FrIqzQfUogDxkx-G7w844ACyeGM&cx=004691144422618487822:v5djm-re6s8&num=5&fields=items(title,link,displayLink,snippet,pagemap/cse_thumbnail/src)&q=#{term}"
+      search = "https://www.googleapis.com/customsearch/v1?key=AIzaSyAzJYuUrHYCX44lEvyYKd6fTVwwKelUP-s&cx=004691144422618487822:v5djm-re6s8&num=5&fields=items(title,link,displayLink,snippet,pagemap/cse_thumbnail/src)&q=#{term}"
     end
     # search = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBFAaw-FrIqzQfUogDxkx-G7w844ACyeGM&cx=004691144422618487822:v5djm-re6s8&num=5&fields=items(title,link,displayLink,snippet,pagemap/cse_thumbnail/src)&q=#{term}"
-
+    puts "search: #{search}"
+    
     JSON.parse(RestClient.get(search))
   end
 
