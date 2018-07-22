@@ -63,9 +63,15 @@ class Subactivity < ApplicationRecord
 
 
   def related_urls_hash(term)
-    search = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBFAaw-FrIqzQfUogDxkx-G7w844ACyeGM&cx=004691144422618487822:v5djm-re6s8&num=5&fields=items(title,link,displayLink,snippet,pagemap/cse_thumbnail/src)&q=#{term}"
+    req = ActionDispatch::Request.new 'HTTP_HOST'
+    if req.host.include? "localhost"
+      search = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBFAaw-FrIqzQfUogDxkx-G7w844ACyeGM&cx=004691144422618487822:v5djm-re6s8&num=5&fields=items(title,link,displayLink,snippet,pagemap/cse_thumbnail/src)&q=#{term}"
+    else
+      search = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBFAaw-FrIqzQfUogDxkx-G7w844ACyeGM&cx=004691144422618487822:v5djm-re6s8&num=5&fields=items(title,link,displayLink,snippet,pagemap/cse_thumbnail/src)&q=#{term}"
+    end
+    # search = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBFAaw-FrIqzQfUogDxkx-G7w844ACyeGM&cx=004691144422618487822:v5djm-re6s8&num=5&fields=items(title,link,displayLink,snippet,pagemap/cse_thumbnail/src)&q=#{term}"
+
     JSON.parse(RestClient.get(search))
- 
   end
 
 end
