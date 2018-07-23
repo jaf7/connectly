@@ -14,7 +14,7 @@ Sites like Meetup and Facebook are bogged down by so many similar (if not identi
 * Full Authentication / Authorization using Bcrypt hashing
 * Google Maps API
 
-## TODO
+## ToDo
 - [ ] Implement IBM [Arria](https://nlgapi.arria.com/#/microservices/aOrAn) aOrAn, pluralNoun, pluralVerb microservices for Natural Language Generation
 
 - [ ] Refactor to pure CSS (SASS w/ BEM)
