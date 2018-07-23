@@ -15,9 +15,9 @@ Sites like Meetup and Facebook are bogged down by so many similar (if not identi
 * Google Maps API
 
 ## TODO
-[ ] Implement IBM [Arria](https://nlgapi.arria.com/#/microservices/aOrAn) aOrAn, pluralNoun, pluralVerb microservices for Natural Language Generation
+- [ ] Implement IBM [Arria](https://nlgapi.arria.com/#/microservices/aOrAn) aOrAn, pluralNoun, pluralVerb microservices for Natural Language Generation
 
-[ ] Refactor to pure CSS (SASS w/ BEM)
+- [ ] Refactor to pure CSS (SASS w/ BEM)
 
 ## Credits
 Thanks to my pairing partner on this project, John York!
