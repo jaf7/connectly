@@ -1,7 +1,7 @@
 # Connectly
 Discover your true travel | sports | music | learning | ? | companions based on shared passions.
 
-## Demo / How To
+## Demo
 
 * Video demo [here](https://www.youtube.com/watch?v=O7oKxrhMfm4&feature=youtu.be)
 
@@ -9,12 +9,13 @@ Discover your true travel | sports | music | learning | ? | companions based on 
 Sites like Meetup and Facebook are bogged down by so many similar (if not identical) groups that users can find themselves with options paralysis. The idea behind Connectly is to create fewer groups for each activity, while ensuring that every group is truly passionate about their chosen topic.
 
 ## Built Using
-* Full Rails MVC architecture, ActiveRecord associations, RESTful routes
+* Full Rails MVC architecture, ActiveRecord, RESTful routes
 * ActiveRecord associations: data modeling constructs multi-level user-matching by interest
 * Full Authentication / Authorization using Bcrypt hashing
+* Google Maps API
 
-#### TODO
-* Experiment w/ IBM [Arria](https://nlgapi.arria.com/#/microservices/aOrAn) aOrAn, pluralNoun, pluralVerb Microservice for Natural Language Generation
+## TODO
+* Implement IBM [Arria](https://nlgapi.arria.com/#/microservices/aOrAn) aOrAn, pluralNoun, pluralVerb microservices for Natural Language Generation
 * Refactor to pure CSS (SASS w/ BEM)
 
 ## Credits
